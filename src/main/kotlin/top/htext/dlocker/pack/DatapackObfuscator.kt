@@ -33,6 +33,8 @@ class DatapackObfuscator(path: Path, seed: String) : PackObfuscator, PackFileMan
 		for (file in files) {
 			val lines = file.readLines()
 			for (line in lines) {
+
+
 				// TODO: Obfuscates datapack
 			}
 		}
