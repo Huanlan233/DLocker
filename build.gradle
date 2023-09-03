@@ -1,0 +1,35 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.9.0'
+    id 'application'
+}
+
+group = "${project.maven_group}"
+version = "${project.app_version}"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation('org.jetbrains.kotlin:kotlin-test')
+
+    implementation('com.google.code.gson:gson:2.10.1')
+
+    implementation('commons-cli:commons-cli:1.5.0')
+    implementation('commons-io:commons-io:2.13.0')
+
+    implementation('org.apache.logging.log4j:log4j-api:2.20.0')
+    implementation('org.apache.logging.log4j:log4j-core:2.20.0')
+}
+
+test {
+    useJUnitPlatform()
+}
+
+kotlin {
+    jvmToolchain(8)
+}
+
+application {
+    mainClassName = "${project.app_name}"
+}
