@@ -33,8 +33,6 @@ class DLocker {
 				ResourcepackObfuscator(output, seed)
 
 			packObfuscator.obfuscate()
-
-			LOGGER.debug(PackUtils.getPackType(output))
 		}
 
 		private fun initOptions(): Options {
